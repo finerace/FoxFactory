@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class FoxResource : MonoBehaviour
@@ -7,7 +8,6 @@ public class FoxResource : MonoBehaviour
     [SerializeField] private float resourceQuality = 1;
 
     public float ResourceQuality => resourceQuality;
-    
     public Transform ResourceT => resourceT;
     
     public void SetNewResourceMaterial(Material newMat)
@@ -15,14 +15,12 @@ public class FoxResource : MonoBehaviour
         resourceMesh.material = newMat;
     }
 
-    public void UpResourceQuality(int processingQuality)
+    public void UpResourceQuality(float quality)
     {
-        if(processingQuality <= 0)
-            return;
-
-        const float processingQualityFactor = 0.1f;
-
-        resourceQuality += processingQuality * processingQualityFactor;
+        if(quality <= 0)
+            throw new Exception("Улучшение качества не может быть меньше или равно нулю. ПЕРЕДЕЛЫВАЙ!");
+        
+        resourceQuality += quality;
     }
 
 }

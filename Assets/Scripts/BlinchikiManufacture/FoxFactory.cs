@@ -1,9 +1,10 @@
+using System;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class FoxFactory : ResourceInput
 {
-    [SerializeField] private int factoryLevel = 0;
+    [SerializeField] private float resourceQualityFactor = 0;
     [SerializeField] private MeshRenderer factoryMesh;
     [Space]
     [SerializeField] private ResourceInput resourceOutput;
@@ -11,15 +12,19 @@ public class FoxFactory : ResourceInput
     
     public override void Input(FoxResource resource,float resourceMoveForce)
     {
-        resource.UpResourceQuality(factoryLevel);
+        resource.UpResourceQuality(resourceQualityFactor);
 
         resource.SetNewResourceMaterial(foxResourceNewMat);
         resourceOutput.Input(resource,resourceMoveForce);
     }
 
-    public void UpgradeFactoryLevel()
+    public void SetResourceQualityFactor(float qualityFactor)
     {
-        factoryLevel += 1;
+        if (qualityFactor <= 0)
+            throw new Exception("Завод не может ухудшать или не изменять качество ресурса. ПЕРЕДЕЛЫВАЙ!");
+
+        resourceQualityFactor = qualityFactor;
+
     }
 
 }
