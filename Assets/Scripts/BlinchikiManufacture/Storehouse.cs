@@ -52,4 +52,15 @@ public class Storehouse : ResourceInput
         Destroy(resource.gameObject);
     }
 
+    public float GetOneResource()
+    {
+        if (resourceStorehouse.Count <= 0)
+            throw new Exception("НЕТУ НИЧЕГО ОТСТАНЬТЕ ПОЖАЛУЙСТА");
+
+        var result = resourceStorehouse.Dequeue();
+        
+        onBlicnhikiCountChangeEvent?.Invoke(CurrentResourceCount);
+        return result;
+    }
+
 }
