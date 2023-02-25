@@ -1,23 +1,52 @@
+using System;
 using UnityEngine;
 
 public class FoxBarn : MonoBehaviour
 {
-    [SerializeField] private int clicksCountToGenerateWheat = 4;
-    [SerializeField] private int currentClicksCount = 0;
+    [SerializeField] private GlobalFactoryLine globalFactoryLine;
+
+    [Space] 
+    
+    [SerializeField] private float resourceSpawnFactor = 0.25f;
+
+    private float oldFactoryLineMovement = 0;
+    
+    [Space]
     
     [SerializeField] private ResourceInput startFactoryLine;
-    [SerializeField] private GameObject wheatResourcePrefab;
+    [SerializeField] private GameObject resourcePrefab;
 
-    public void ClickManufacture()
+
+    private void Start()
     {
-        currentClicksCount++;
-        
-        if (currentClicksCount >= clicksCountToGenerateWheat)
+        globalFactoryLine.OnFactoryLineMoveEvent += CheckForSpawn;
+    }
+
+    private void CheckForSpawn(float currentFactoryLineMovement)
+    {
+        var factoryLineSpawnFactor = (oldFactoryLineMovement + resourceSpawnFactor) - currentFactoryLineMovement;
+
+        if (factoryLineSpawnFactor <= 0)
         {
-            currentClicksCount = 0;
-            
-            var foxResource = Instantiate(wheatResourcePrefab).GetComponent<FoxResource>();
-            startFactoryLine.Input(foxResource,0);
+            oldFactoryLineMovement = currentFactoryLineMovement;
+
+            SpawnResource();
         }
+    }
+
+    private void SpawnResource()
+    {
+        var newResource = 
+            Instantiate(resourcePrefab,transform.position,Quaternion.identity).GetComponent<FoxResource>();
+        
+        startFactoryLine.Input(newResource,0);
+    }
+    
+    public void SetResourceSpawnRate(float newSpawnRate)
+    {
+        if (newSpawnRate <= 0)
+            throw new Exception("spawnRate не может быть отрицательным или нулевым.");
+
+        resourceSpawnFactor = newSpawnRate;
     }
 }

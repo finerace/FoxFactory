@@ -1,16 +1,23 @@
 using System;
-using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
 public class GlobalFactoryLine : MonoBehaviour
 {
     [SerializeField] private float factoryLineClickSpeed;
-    private float currentFactoryLineMovement;
+    [SerializeField] private float currentFactoryLineMovement;
     
     [SerializeField] private FactoryLineFragment[] factoryLineFragments;
     
     public float CurrentFactoryLineMovement => currentFactoryLineMovement;
 
+    private event Action<float> onFactoryLineMoveEvent;
+    public event Action<float> OnFactoryLineMoveEvent
+    {
+        add => onFactoryLineMoveEvent += value ?? throw new NullReferenceException();
+        
+        remove => onFactoryLineMoveEvent -= value ?? throw new NullReferenceException();
+    }
+    
     public void OnClickMoveFactoryLine()
     {
         MoveFactoryLine(factoryLineClickSpeed);
@@ -28,6 +35,8 @@ public class GlobalFactoryLine : MonoBehaviour
                 factoryLineFragment.MoveFactoryLine(moveStep);
             }
         }
+
+        onFactoryLineMoveEvent?.Invoke(currentFactoryLineMovement);
     }
 
     public void SetNewClickPower(float clickPower)
@@ -37,5 +46,4 @@ public class GlobalFactoryLine : MonoBehaviour
 
         factoryLineClickSpeed = clickPower;
     }
-
 }
