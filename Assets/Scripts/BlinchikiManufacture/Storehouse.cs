@@ -45,7 +45,7 @@ public class Storehouse : ResourceInput
             SellExcess();
             void SellExcess()
             {
-                playerMoneyService.MoneyCount += (int)(resource.ResourceQuality / excessPriceMultiplier);
+                playerMoneyService.MoneyCount += resource.ResourceQuality / excessPriceMultiplier;
             }
         }
         
@@ -54,10 +54,8 @@ public class Storehouse : ResourceInput
 
     public int GetOneResource()
     {
-        print(CurrentResourceCount);
-        
         if (resourceStorehouse.Count <= 0)
-            throw new Exception("НЕТУ НИЧЕГО ОТСТАНЬТЕ ПОЖАЛУЙСТА");
+            throw new Exception("Ресурсов больше нет!");
 
         var result = resourceStorehouse.Dequeue();
         
