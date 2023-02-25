@@ -7,10 +7,10 @@ public class Storehouse : ResourceInput
     [SerializeField] private PlayerMoneyService playerMoneyService;
     [SerializeField] private int maxResourceCount = 30;
 
-    private Queue<float> resourceStorehouse = new Queue<float>();
+    private Queue<int> resourceStorehouse = new Queue<int>();
 
     [Space] 
-    [SerializeField] private float excessPriceMultiplier;
+    [SerializeField] private int excessPriceMultiplier;
     
     private event Action<int> onBlicnhikiCountChangeEvent;
     public event Action<int> OnBlicnhikiCountChangeEvent
@@ -45,15 +45,17 @@ public class Storehouse : ResourceInput
             SellExcess();
             void SellExcess()
             {
-                playerMoneyService.MoneyCount += (1 * resource.ResourceQuality) * excessPriceMultiplier;
+                playerMoneyService.MoneyCount += (int)(resource.ResourceQuality / excessPriceMultiplier);
             }
         }
         
         Destroy(resource.gameObject);
     }
 
-    public float GetOneResource()
+    public int GetOneResource()
     {
+        print(CurrentResourceCount);
+        
         if (resourceStorehouse.Count <= 0)
             throw new Exception("НЕТУ НИЧЕГО ОТСТАНЬТЕ ПОЖАЛУЙСТА");
 
@@ -63,4 +65,14 @@ public class Storehouse : ResourceInput
         return result;
     }
 
+    public void SetNewMaxResourceCount(int newMaxResource)
+    {
+        if (newMaxResource <= 0)
+            throw new Exception("Нельзя делать нулевое или отрицательное количество вместимости");
+
+        maxResourceCount = newMaxResource;
+        
+        onBlicnhikiCountChangeEvent?.Invoke(CurrentResourceCount);
+    }
+    
 }

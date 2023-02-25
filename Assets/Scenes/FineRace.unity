@@ -397,9 +397,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b00122a28354f8a46884d9e27c70929f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceQualityFactor: 0.33
+  resourceQualityFactor: 1
   factoryMesh: {fileID: 21003293}
-  resourceOutput: {fileID: 535451856}
+  resourceOutput: {fileID: 225002701}
   foxResourceNewMat: {fileID: 2100000, guid: 6453b6bb1d7a07f4fb781927a49ea580, type: 2}
 --- !u!1 &62905913
 GameObject:
@@ -1318,7 +1318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31fc51d18263b18439bc71100673f2ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyCount: 100
+  moneyCount: 0
 --- !u!1 &281863267
 GameObject:
   m_ObjectHideFlags: 0
@@ -1378,6 +1378,7 @@ MonoBehaviour:
   levelCosts: 28000000
   levelImages:
   - {fileID: 0}
+  ignoreItemMesh: 0
   itemMesh: {fileID: 108433506}
   levelItemMat:
   - {fileID: 2100000, guid: 7307dc8e7224223478bb7b3670120486, type: 2}
@@ -1394,7 +1395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.011764706}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.44705883}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -1554,7 +1555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.011764706}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.44705883}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -1600,6 +1601,7 @@ MonoBehaviour:
   levelCosts: 190000002300000064000000c8000000f401000058020000
   levelImages:
   - {fileID: 0}
+  ignoreItemMesh: 0
   itemMesh: {fileID: 1325528340}
   levelItemMat:
   - {fileID: 2100000, guid: b36c9bb58fff245499de548cb43b9a1e, type: 2}
@@ -1609,13 +1611,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: aad8f4d564bc3744891d5bde8b38d1bd, type: 2}
   - {fileID: 2100000, guid: aad8f4d564bc3744891d5bde8b38d1bd, type: 2}
   foxFactory: {fileID: 1325528343}
-  levelResourceQualityFactor:
-  - 0.5
-  - 0.75
-  - 1
-  - 1.5
-  - 2
-  - 3
+  levelResourceQualityFactor: 020000000300000004000000050000000600000007000000
 --- !u!1 &301058696
 GameObject:
   m_ObjectHideFlags: 0
@@ -1834,7 +1830,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.011764706}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.44705883}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -1879,6 +1875,7 @@ MonoBehaviour:
   levelCosts: 190000002300000064000000c8000000f401000058020000
   levelImages:
   - {fileID: 0}
+  ignoreItemMesh: 0
   itemMesh: {fileID: 21003293}
   levelItemMat:
   - {fileID: 2100000, guid: 4da08752c5f3bcb488df5f9483891c2d, type: 2}
@@ -1888,13 +1885,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 44d24e5fe6209a847a64aa73cb432826, type: 2}
   - {fileID: 2100000, guid: 44d24e5fe6209a847a64aa73cb432826, type: 2}
   foxFactory: {fileID: 21003296}
-  levelResourceQualityFactor:
-  - 0.5
-  - 0.75
-  - 1
-  - 1.5
-  - 2
-  - 3
+  levelResourceQualityFactor: 020000000300000004000000050000000600000007000000
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2225,7 +2216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.011764706}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.44705883}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -2272,6 +2263,7 @@ MonoBehaviour:
   levelCosts: 19000000320000004b000000640000007d000000c8000000
   levelImages:
   - {fileID: 0}
+  ignoreItemMesh: 0
   itemMesh: {fileID: 0}
   levelItemMat:
   - {fileID: 2100000, guid: 91e36073d800d624f9e4865f9c53d086, type: 2}
@@ -4199,8 +4191,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -638, y: 131}
-  m_SizeDelta: {x: 136.6, y: 103}
+  m_AnchoredPosition: {x: 462.9, y: -160.4}
+  m_SizeDelta: {x: 112.4, y: 173.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &880281600
 MonoBehaviour:
@@ -4215,7 +4207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.011764706}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.44705883}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -4260,6 +4252,7 @@ MonoBehaviour:
   levelCosts: 1900000064000000c8000000fa0000002c0100005e010000
   levelImages:
   - {fileID: 0}
+  ignoreItemMesh: 0
   itemMesh: {fileID: 0}
   levelItemMat:
   - {fileID: 2100000, guid: f1fa20d371e93bd4aac8b0f2f25119c5, type: 2}
@@ -4943,7 +4936,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3dbbc569c5a674d4fa3fc368d9e8f8b0, type: 2}
+  - {fileID: 2100000, guid: 21bd4712def86f845abff5531dc92ab7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5182,7 +5175,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1057880731}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.08702534}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5191,9 +5184,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -850, y: 8}
+  m_AnchoredPosition: {x: -682, y: 51.169}
   m_SizeDelta: {x: 221.7, y: 167.2}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.8906648, y: 0.7813664}
 --- !u!114 &1057880733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5207,7 +5200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.011764706}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.44705883}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -5254,6 +5247,7 @@ MonoBehaviour:
   levelCosts: 2c010000f40100005802000084030000dc050000
   levelImages:
   - {fileID: 0}
+  ignoreItemMesh: 0
   itemMesh: {fileID: 1900039123}
   levelItemMat:
   - {fileID: 2100000, guid: 372c1388e6e6b1545a05e301c2755097, type: 2}
@@ -5521,7 +5515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b00122a28354f8a46884d9e27c70929f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceQualityFactor: 0.33
+  resourceQualityFactor: 1
   factoryMesh: {fileID: 1081498295}
   resourceOutput: {fileID: 982819556}
   foxResourceNewMat: {fileID: 2100000, guid: ea48cb6e4a9f2e04d81ff34ad36cfd8b, type: 2}
@@ -6405,7 +6399,7 @@ MonoBehaviour:
   mainStorehouse: {fileID: 1595069495}
   courierMaxCapacity: 30
   courierRepeatTime: 15
-  resources: []
+  resources: 
 --- !u!1 &1263736110
 GameObject:
   m_ObjectHideFlags: 0
@@ -6541,7 +6535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.011764706}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.44705883}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -6578,6 +6572,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02379bbf0b9580844b4542da2e9056a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemName: "\u0421\u043A\u043B\u0430\u0434-\u041C\u0430\u0433\u0430\u0437\u0438\u043D"
+  itemDescription: "\u041D\u0430 \u044D\u0442\u043E\u043C \u0441\u043A\u043B\u0430\u0434\u0435
+    \u0445\u0440\u0430\u043D\u044F\u0442\u0441\u044F \u0431\u043B\u0438\u043D\u044B,
+    \u0430 \u0432 \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u0435 \u043F\u0440\u043E\u0434\u0430\u044E\u0442\u0441\u044F
+    \u0438\u0437\u043B\u0438\u0448\u043A\u0438."
+  maxLevels: 6
+  currentLevel: 0
+  levelCosts: 320000006400000096000000fa00000086010000
+  levelImages:
+  - {fileID: 0}
+  ignoreItemMesh: 0
+  itemMesh: {fileID: 1595069492}
+  levelItemMat:
+  - {fileID: 2100000, guid: ad0582de4ec0c394cad84614d1868f9b, type: 2}
+  - {fileID: 2100000, guid: 59e86d0aacd551c4baff829b3ef0983b, type: 2}
+  - {fileID: 2100000, guid: 8462c222e116189478e65f496309710d, type: 2}
+  - {fileID: 2100000, guid: bef62873e58ad9041bc329b991d2fd4d, type: 2}
+  - {fileID: 2100000, guid: 72a7ec8c344a5624181ffbe717832cdc, type: 2}
+  storehouse: {fileID: 1595069495}
+  levelMaxResourceCount: 28000000320000003c0000004600000050000000
 --- !u!4 &1288238624 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4208696099173604585, guid: 2c526256c2615ae4986c6db5f238bbf3,
@@ -6681,7 +6695,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b00122a28354f8a46884d9e27c70929f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resourceQualityFactor: 0.33
+  resourceQualityFactor: 1
   factoryMesh: {fileID: 1325528340}
   resourceOutput: {fileID: 1406192030}
   foxResourceNewMat: {fileID: 2100000, guid: 6893b9571c4dd034c9a40c34afead9a9, type: 2}
@@ -7057,7 +7071,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5188679, g: 0.5188679, b: 0.5188679, a: 0.011764706}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.44705883}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -7102,6 +7116,7 @@ MonoBehaviour:
   levelCosts: 190000002300000064000000c8000000f401000058020000
   levelImages:
   - {fileID: 0}
+  ignoreItemMesh: 0
   itemMesh: {fileID: 1081498295}
   levelItemMat:
   - {fileID: 2100000, guid: e69205bee71d33b46840776f5c81bfea, type: 2}
@@ -7111,13 +7126,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: fa8774e3782ab644686e48f8db3ca40b, type: 2}
   - {fileID: 2100000, guid: fa8774e3782ab644686e48f8db3ca40b, type: 2}
   foxFactory: {fileID: 1081498298}
-  levelResourceQualityFactor:
-  - 0.5
-  - 0.75
-  - 1
-  - 1.5
-  - 2
-  - 3
+  levelResourceQualityFactor: 020000000300000004000000050000000600000007000000
 --- !u!1 &1399154962
 GameObject:
   m_ObjectHideFlags: 0
@@ -7728,7 +7737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMoneyService: {fileID: 259843832}
   maxResourceCount: 30
-  excessPriceMultiplier: 0.25
+  excessPriceMultiplier: 0
 --- !u!1 &1599416268
 GameObject:
   m_ObjectHideFlags: 0
@@ -8681,7 +8690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   globalFactoryLine: {fileID: 1399154964}
-  resourceSpawnFactor: 1
+  resourceSpawnFactor: 0.25
   startFactoryLine: {fileID: 1028298609}
   resourcePrefab: {fileID: 3116140524448493924, guid: bd6f89d8971b9dc4694191feef64d07e,
     type: 3}
@@ -8996,7 +9005,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1961384414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9641,17 +9650,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clickSoundData:
-    audioMixerGroup: {fileID: 0}
+    audioMixerGroup: {fileID: -3266704158877669387, guid: 7c5535e63d72b7847b0d3493688679db,
+      type: 2}
     clips:
     - {fileID: 8300000, guid: 2443baf89c3d1ec4a9a31fff7e62055e, type: 3}
     castPos: {x: 0, y: 0, z: 0}
     castParent: {fileID: 0}
-    priority: 12
-    volumeMin: 0.55
-    volumeMax: 0.7
+    priority: 3
+    volumeMin: 0.85
+    volumeMax: 1
     isLoop: 0
-    pitchMin: 1
-    pitchMax: 1
+    pitchMin: 0.95
+    pitchMax: 1.05
     stereoPan: 0
     spatialBlend: 0
     minDistance: 1

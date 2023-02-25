@@ -16,7 +16,7 @@ public class PlayerMoneyLabel : MonoBehaviour
         playerMoneyService.OnMoneyCountChange += UpdateMoneyLabel;
     }
 
-    private void UpdateMoneyLabel(float moneyCount)
+    private void UpdateMoneyLabel(int moneyCount)
     {
         moneyCountLabel.text = $"{moneyPreText}{(int)moneyCount}";
     }
