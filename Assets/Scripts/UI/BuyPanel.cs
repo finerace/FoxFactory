@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,7 +18,15 @@ public class BuyPanel : MonoBehaviour
     [Space] 
     
     [SerializeField] private Image itemImage;
-
+    
+    private event Action onBuyEvent;
+    
+    public event Action OnBuyEvent
+    {
+        add => onBuyEvent += value ?? throw new NullReferenceException();
+        remove => onBuyEvent += value ?? throw new NullReferenceException();
+    }
+    
     public void SetNewBuyPanelValues(ShopItem shopItem)
     {
         if(shopItem.CurrentLevel > shopItem.MaxLevels)
@@ -30,7 +39,7 @@ public class BuyPanel : MonoBehaviour
         if (shopItem.CurrentLevel < shopItem.MaxLevels)
             itemPriceLabel.text = $"{shopItem.LevelCosts[shopItem.CurrentLevel-1]} Монет";
         else
-            itemPriceLabel.text = $"Куплено";
+            itemPriceLabel.text = $"Всё куплено";
 
         //itemImage.sprite = shopItem.LevelMaterials[shopItem.CurrentLevel];
 
@@ -39,7 +48,7 @@ public class BuyPanel : MonoBehaviour
 
     public void BuyItem()
     {
-        if(currentShopItem.CurrentLevel > currentShopItem.MaxLevels)
+        if(currentShopItem.CurrentLevel >= currentShopItem.MaxLevels)
             return;
         
         if(currentShopItem.CurrentLevel >= currentShopItem.LevelCosts.Length)
@@ -53,6 +62,8 @@ public class BuyPanel : MonoBehaviour
             currentShopItem.BuyItem();
 
             SetNewBuyPanelValues(currentShopItem);
+            
+            onBuyEvent?.Invoke();
         }
     }
     
