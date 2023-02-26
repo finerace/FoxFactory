@@ -8,7 +8,8 @@ public class FoxBarn : MonoBehaviour
     [Space] 
     
     [SerializeField] private float resourceSpawnFactor = 0.25f;
-
+    [SerializeField] private int resourceStartQuality = 0;
+    
     private float oldFactoryLineMovement = 0;
     
     [Space]
@@ -39,6 +40,7 @@ public class FoxBarn : MonoBehaviour
         var newResource = 
             Instantiate(resourcePrefab,transform.position,Quaternion.identity).GetComponent<FoxResource>();
         
+        newResource.UpResourceQuality(resourceStartQuality);
         startFactoryLine.Input(newResource,0);
     }
     
@@ -48,5 +50,13 @@ public class FoxBarn : MonoBehaviour
             throw new Exception("spawnRate не может быть отрицательным или нулевым.");
 
         resourceSpawnFactor = newSpawnRate;
+    }
+
+    public void SetResourceStartQuality(int startQuality)
+    {
+        if (startQuality < 0)
+            throw new Exception("Стартовое значение качества не может быть меньше нуля!");
+
+        resourceStartQuality = startQuality;
     }
 }

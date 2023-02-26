@@ -6,11 +6,12 @@ public class Storehouse : ResourceInput
 {
     [SerializeField] private PlayerMoneyService playerMoneyService;
     [SerializeField] private int maxResourceCount = 30;
-
+    [SerializeField] private int resourceQualityUp = 0;
+    
     private Queue<int> resourceStorehouse = new Queue<int>();
 
     [Space] 
-    [SerializeField] private int excessPriceMultiplier;
+    [SerializeField] private int excessPriceDivider;
     
     private event Action<int> onBlicnhikiCountChangeEvent;
     public event Action<int> OnBlicnhikiCountChangeEvent
@@ -30,6 +31,8 @@ public class Storehouse : ResourceInput
 
     public override void Input(FoxResource resource,float resourceMoveForce)
     {
+        resource.UpResourceQuality(resourceQualityUp);
+        
         if (resourceStorehouse.Count < maxResourceCount)
         {
             AddNewBlinchikToStorehouse();
@@ -45,7 +48,7 @@ public class Storehouse : ResourceInput
             SellExcess();
             void SellExcess()
             {
-                playerMoneyService.MoneyCount += resource.ResourceQuality / excessPriceMultiplier;
+                playerMoneyService.MoneyCount += resource.ResourceQuality / excessPriceDivider;
             }
         }
         
@@ -71,6 +74,14 @@ public class Storehouse : ResourceInput
         maxResourceCount = newMaxResource;
         
         onBlicnhikiCountChangeEvent?.Invoke(CurrentResourceCount);
+    }
+
+    public void SetResourceQualityUp(int qualityUp)
+    {
+        if (qualityUp < 0)
+            throw new Exception("Улучшение качества ресурса не может быть отрицательным!");
+
+        resourceQualityUp = qualityUp;
     }
     
 }
