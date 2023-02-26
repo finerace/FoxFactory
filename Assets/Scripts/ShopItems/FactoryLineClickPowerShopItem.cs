@@ -6,9 +6,18 @@ public class FactoryLineClickPowerShopItem : ShopItem
 
     [SerializeField] private float[] levelClickPower;
 
+    private new void Awake()
+    {
+        BuyItem();
+        
+        base.Awake();
+    }
 
     public override void BuyItem()
     {
-        globalFactoryLine.SetNewClickPower(levelClickPower[currentLevel]);
+        if(currentLevel == 0)
+            return;
+        
+        globalFactoryLine.SetNewClickPower(levelClickPower[currentLevel-1]);
     }
 }

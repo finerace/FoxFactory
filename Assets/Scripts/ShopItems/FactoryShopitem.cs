@@ -7,10 +7,20 @@ public class FactoryShopitem : ShopItem
 
     [Space] 
     
-    [SerializeField] private float[] levelResourceQualityFactor;
+    [SerializeField] private int[] levelResourceQualityFactor;
     
+    private new void Awake()
+    {
+        BuyItem();
+        
+        base.Awake();
+    }
+
     public override void BuyItem()
     {
-        foxFactory.SetResourceQualityFactor(levelResourceQualityFactor[currentLevel]);
+        if(currentLevel == 0)
+            return;
+        
+        foxFactory.SetResourceQualityFactor(levelResourceQualityFactor[currentLevel-1]);
     }
 }

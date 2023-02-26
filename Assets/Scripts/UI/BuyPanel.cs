@@ -20,14 +20,15 @@ public class BuyPanel : MonoBehaviour
 
     public void SetNewBuyPanelValues(ShopItem shopItem)
     {
-        //var nextLevel = shopItem.CurrentLevel + 1;
+        if(shopItem.CurrentLevel > shopItem.MaxLevels)
+            return;
         
         itemLevelLabel.text = $"Уровень {shopItem.CurrentLevel}/{shopItem.MaxLevels}";
         itemNameLabel.text = shopItem.ItemName;
         itemDescLabel.text = shopItem.ItemDescription;
 
-        if (shopItem.CurrentLevel != shopItem.MaxLevels)
-            itemPriceLabel.text = $"{shopItem.LevelCosts[shopItem.CurrentLevel]} Огоньков";
+        if (shopItem.CurrentLevel < shopItem.MaxLevels)
+            itemPriceLabel.text = $"{shopItem.LevelCosts[shopItem.CurrentLevel-1]} Монет";
         else
             itemPriceLabel.text = $"Куплено";
 
@@ -38,16 +39,19 @@ public class BuyPanel : MonoBehaviour
 
     public void BuyItem()
     {
+        if(currentShopItem.CurrentLevel > currentShopItem.MaxLevels)
+            return;
+        
         if(currentShopItem.CurrentLevel >= currentShopItem.LevelCosts.Length)
             return;
         
-        if (playerMoneyService.MoneyCount >= currentShopItem.LevelCosts[currentShopItem.CurrentLevel])
+        if (playerMoneyService.MoneyCount >= currentShopItem.LevelCosts[currentShopItem.CurrentLevel-1])
         {
-            playerMoneyService.MoneyCount -= currentShopItem.LevelCosts[currentShopItem.CurrentLevel];
-            
-            currentShopItem.BuyItem();
+            playerMoneyService.MoneyCount -= currentShopItem.LevelCosts[currentShopItem.CurrentLevel-1];
+
             currentShopItem.UpgradeItemLevel();
-            
+            currentShopItem.BuyItem();
+
             SetNewBuyPanelValues(currentShopItem);
         }
     }

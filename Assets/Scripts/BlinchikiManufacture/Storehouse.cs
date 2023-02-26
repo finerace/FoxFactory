@@ -6,11 +6,12 @@ public class Storehouse : ResourceInput
 {
     [SerializeField] private PlayerMoneyService playerMoneyService;
     [SerializeField] private int maxResourceCount = 30;
-
-    private Queue<float> resourceStorehouse = new Queue<float>();
+    [SerializeField] private int resourceQualityUp = 0;
+    
+    private Queue<int> resourceStorehouse = new Queue<int>();
 
     [Space] 
-    [SerializeField] private float excessPriceMultiplier;
+    [SerializeField] private int excessPriceDivider;
     
     private event Action<int> onBlicnhikiCountChangeEvent;
     public event Action<int> OnBlicnhikiCountChangeEvent
@@ -30,6 +31,8 @@ public class Storehouse : ResourceInput
 
     public override void Input(FoxResource resource,float resourceMoveForce)
     {
+        resource.UpResourceQuality(resourceQualityUp);
+        
         if (resourceStorehouse.Count < maxResourceCount)
         {
             AddNewBlinchikToStorehouse();
@@ -45,17 +48,19 @@ public class Storehouse : ResourceInput
             SellExcess();
             void SellExcess()
             {
-                playerMoneyService.MoneyCount += (1 * resource.ResourceQuality) * excessPriceMultiplier;
+                print(resource.ResourceQuality + "  " + excessPriceDivider);
+
+                playerMoneyService.MoneyCount += resource.ResourceQuality / excessPriceDivider;
             }
         }
         
         Destroy(resource.gameObject);
     }
 
-    public float GetOneResource()
+    public int GetOneResource()
     {
         if (resourceStorehouse.Count <= 0)
-            throw new Exception("НЕТУ НИЧЕГО ОТСТАНЬТЕ ПОЖАЛУЙСТА");
+            throw new Exception("Ресурсов больше нет!");
 
         var result = resourceStorehouse.Dequeue();
         
@@ -63,4 +68,22 @@ public class Storehouse : ResourceInput
         return result;
     }
 
+    public void SetNewMaxResourceCount(int newMaxResource)
+    {
+        if (newMaxResource <= 0)
+            throw new Exception("Нельзя делать нулевое или отрицательное количество вместимости");
+
+        maxResourceCount = newMaxResource;
+        
+        onBlicnhikiCountChangeEvent?.Invoke(CurrentResourceCount);
+    }
+
+    public void SetResourceQualityUp(int qualityUp)
+    {
+        if (qualityUp < 0)
+            throw new Exception("Улучшение качества ресурса не может быть отрицательным!");
+
+        resourceQualityUp = qualityUp;
+    }
+    
 }

@@ -6,8 +6,15 @@ public class FabricLineAutoMovementShopItem : ShopItem
 
     [SerializeField] private float[] levelsAutoMovementPower;
     
+    private new void Awake()
+    {
+        BuyItem();      
+        
+        base.Awake();
+    }
+
     public override void BuyItem()
     {
-        fabricLineAutoMovement.SetAutoMovementPower(levelsAutoMovementPower[currentLevel]);
+        fabricLineAutoMovement.SetAutoMovementPower(levelsAutoMovementPower[currentLevel-1]);
     }
 }

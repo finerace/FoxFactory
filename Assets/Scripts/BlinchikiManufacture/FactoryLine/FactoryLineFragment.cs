@@ -97,7 +97,7 @@ public class FactoryLineFragment : ResourceInput
         resultPos = lineForwardVector * (lineLength * lineProgress);
         resultPos -= lineForwardVector * (lineLength / 2);
         
-        resultPos += factoryLineFragment.FactoryLineT.position + factoryLineFragment.FactoryLineT.up * 0.05f;
+        resultPos += factoryLineFragment.FactoryLineT.position + factoryLineFragment.FactoryLineT.up * (0.01f + lineProgress/10) ;
         
         return resultPos;
     }

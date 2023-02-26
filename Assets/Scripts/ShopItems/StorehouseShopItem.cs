@@ -1,18 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
-public class StorehouseShopItem : MonoBehaviour
+public class StorehouseShopItem : ShopItem
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Storehouse storehouse;
+
+    [SerializeField] private int[] levelMaxResourceCount;
+    [SerializeField] private int[] levelResourceQualityUp;
+
+    private new void Awake()
     {
+        BuyItem();
         
+        base.Awake();
     }
 
-    // Update is called once per frame
-    void Update()
+    public override void BuyItem()
     {
+        if(currentLevel == 0)
+            return;
         
+        storehouse.SetNewMaxResourceCount(levelMaxResourceCount[currentLevel-1]);
+        storehouse.SetResourceQualityUp(levelResourceQualityUp[currentLevel-1]);
     }
 }
