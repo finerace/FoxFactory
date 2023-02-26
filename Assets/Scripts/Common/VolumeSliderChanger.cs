@@ -26,7 +26,7 @@ public class VolumeSliderChanger : MonoBehaviour
             num -= 0.5f;
             num *= 2f;
 
-            num *= 20;
+            num *= 10;
         }
         else
         {

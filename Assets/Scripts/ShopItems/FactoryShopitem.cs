@@ -9,6 +9,7 @@ public class FactoryShopitem : ShopItem
     
     [SerializeField] private int[] levelResourceQualityFactor;
     
+    
     private new void Awake()
     {
         BuyItem();

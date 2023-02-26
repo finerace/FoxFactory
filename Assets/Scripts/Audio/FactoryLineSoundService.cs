@@ -8,13 +8,17 @@ public class FactoryLineSoundService : MonoBehaviour
 
     [SerializeField] private GlobalFactoryLine globalFactoryLine;
     [SerializeField] private GlobalFactoryLineAutoMovement factoryLineAutoMovement;
-    
+
     [Space] 
+    
+    [SerializeField] private float maxVolume = 0.6f;
+    
+    [Space]
     
     [SerializeField] private float clickEffectMultiplier = 1;
     [SerializeField] private float autoMovementEffectMultiplier;
     [SerializeField] private float changeVolumeSpeed = 5;
-    
+
     private float targetVolume;
     
     private void Awake()
@@ -38,6 +42,9 @@ public class FactoryLineSoundService : MonoBehaviour
         
         var timeStep = Time.deltaTime * changeVolumeSpeed;
         currentVolume = Mathf.Lerp(currentVolume, targetVolume, timeStep);
+
+        if (currentVolume > maxVolume)
+            currentVolume = maxVolume;
 
         soundSource.volume = currentVolume;
     }
