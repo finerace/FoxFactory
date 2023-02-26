@@ -70,6 +70,8 @@ public class ResourceCourier : MonoBehaviour
         playerMoneyService.MoneyCount += (int)resultCurrency;
         
         onSellResourceEvent?.Invoke(resultCurrency);
+        
+        resources.Clear();
     }
     
     private IEnumerator CollectResources()
