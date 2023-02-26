@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FoxFactory : ResourceInput
 {
-    [SerializeField] private float resourceQualityFactor = 0;
+    [SerializeField] private int resourceQualityFactor = 0;
     [SerializeField] private MeshRenderer factoryMesh;
     [Space]
     [SerializeField] private ResourceInput resourceOutput;
@@ -18,13 +18,12 @@ public class FoxFactory : ResourceInput
         resourceOutput.Input(resource,resourceMoveForce);
     }
 
-    public void SetResourceQualityFactor(float qualityFactor)
+    public void SetResourceQualityFactor(int qualityFactor)
     {
         if (qualityFactor <= 0)
             throw new Exception("Завод не может ухудшать или не изменять качество ресурса. ПЕРЕДЕЛЫВАЙ!");
 
         resourceQualityFactor = qualityFactor;
-
     }
 
 }

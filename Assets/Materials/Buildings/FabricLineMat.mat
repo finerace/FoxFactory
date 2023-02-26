@@ -68,7 +68,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture:
-        m_Texture: {fileID: 2800000, guid: 423430e8e29de424cbfec7aa08759164, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5f628dbcf807cde4aa817d1a24d7df35, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -122,7 +122,7 @@ Material:
     - _Color: {r: 0.39622638, g: 0.39622638, b: 0.39622638, a: 1}
     - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _LineMovement: {r: 20.999985, g: 0, b: 0, a: 0}
+    - _LineMovement: {r: 156.00029, g: 0, b: 0, a: 0}
     - _MovementVector: {r: -1, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Tiling: {r: 6, g: 1, b: 0, a: 0}

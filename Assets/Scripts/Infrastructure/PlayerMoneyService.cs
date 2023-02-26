@@ -1,13 +1,11 @@
 using System;
-using System.ComponentModel.Design;
-using TMPro;
 using UnityEngine;
 
 public class PlayerMoneyService : MonoBehaviour
 {
-    [SerializeField] private float moneyCount;
+    [SerializeField] private int moneyCount;
     
-    public float MoneyCount
+    public int MoneyCount
     {
         get => moneyCount;
 
@@ -22,8 +20,8 @@ public class PlayerMoneyService : MonoBehaviour
         }
     }
 
-    private event Action<float> onMoneyCountChange;
-    public event Action<float> OnMoneyCountChange
+    private event Action<int> onMoneyCountChange;
+    public event Action<int> OnMoneyCountChange
     {
         add => onMoneyCountChange += value ?? throw new NullReferenceException(); 
         

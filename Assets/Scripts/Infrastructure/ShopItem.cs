@@ -19,6 +19,7 @@ public abstract class ShopItem : MonoBehaviour,IPointerDownHandler,IPointerEnter
 
     [Space] 
     
+    [SerializeField] protected bool ignoreItemMesh;
     [SerializeField] protected MeshRenderer itemMesh;
     [SerializeField] protected Material[] levelItemMat;
     public Material[] LevelItemMat => levelItemMat;
@@ -41,7 +42,9 @@ public abstract class ShopItem : MonoBehaviour,IPointerDownHandler,IPointerEnter
     public void UpgradeItemLevel()
     {
         currentLevel += 1;
-        itemMesh.material = levelItemMat[currentLevel-1];
+        
+        if(!ignoreItemMesh)
+            itemMesh.material = levelItemMat[currentLevel-1];
     }
 
     private void OpenBuyPanel()

@@ -15,7 +15,7 @@ public class ResourceCourier : MonoBehaviour
     
     [Space] 
     
-    [SerializeField] private List<float> resources;
+    [SerializeField] private List<int> resources;
 
     private event Action<int> onSellResourceEvent;
     public event Action<int> OnSellResourceEvent
@@ -53,14 +53,14 @@ public class ResourceCourier : MonoBehaviour
 
     private void SellAllResources()
     {
-        var resultCurrency = 0f;
+        var resultCurrency = 0;
 
         foreach (var resourceQuality in resources)
             resultCurrency += resourceQuality;
         
-        playerMoneyService.MoneyCount += resultCurrency;
+        playerMoneyService.MoneyCount += (int)resultCurrency;
         
-        onSellResourceEvent?.Invoke((int)resultCurrency);
+        onSellResourceEvent?.Invoke(resultCurrency);
     }
     
     private IEnumerator CollectResources()

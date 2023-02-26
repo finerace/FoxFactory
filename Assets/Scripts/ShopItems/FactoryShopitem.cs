@@ -7,7 +7,7 @@ public class FactoryShopitem : ShopItem
 
     [Space] 
     
-    [SerializeField] private float[] levelResourceQualityFactor;
+    [SerializeField] private int[] levelResourceQualityFactor;
     
     public override void BuyItem()
     {

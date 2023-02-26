@@ -18,9 +18,18 @@ public class GlobalFactoryLine : MonoBehaviour
         remove => onFactoryLineMoveEvent -= value ?? throw new NullReferenceException();
     }
     
+    private event Action<float> onFactoryLineClickMoveEvent;
+    public event Action<float> OnFactoryLineClickMoveEvent
+    {
+        add => onFactoryLineClickMoveEvent += value ?? throw new NullReferenceException();
+        
+        remove => onFactoryLineClickMoveEvent -= value ?? throw new NullReferenceException();
+    }
+    
     public void OnClickMoveFactoryLine()
     {
         MoveFactoryLine(factoryLineClickSpeed);
+        onFactoryLineClickMoveEvent?.Invoke(factoryLineClickSpeed);
     }
     
     public void MoveFactoryLine(float moveStep)
