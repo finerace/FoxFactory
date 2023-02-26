@@ -18,6 +18,6 @@ public class FactoryShopitem : ShopItem
 
     public override void BuyItem()
     {
-        foxFactory.SetResourceQualityFactor(levelResourceQualityFactor[currentLevel]);
+        foxFactory.SetResourceQualityFactor(levelResourceQualityFactor[currentLevel-1]);
     }
 }

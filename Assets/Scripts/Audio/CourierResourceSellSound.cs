@@ -1,18 +1,28 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class CourierResourceSellSound : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private ResourceCourier resourceCourier;
+    private AudioPoolService audioPoolService;
+    
+    [Space] 
+    
+    [SerializeField] private AudioCastData sound1;
+    [SerializeField] private AudioCastData sound2;
+
+
+    private void Start()
     {
-        
+        audioPoolService = AudioPoolService.audioPoolServiceInstance;
+
+        resourceCourier.OnSellResourceEvent += CastSounds;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void CastSounds(int sell)
     {
-        
+        audioPoolService.CastAudio(sound1);
+        audioPoolService.CastAudio(sound2);
     }
+    
 }

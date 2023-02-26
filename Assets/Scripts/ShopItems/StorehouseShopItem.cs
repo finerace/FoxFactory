@@ -17,7 +17,7 @@ public class StorehouseShopItem : ShopItem
 
     public override void BuyItem()
     {
-        storehouse.SetNewMaxResourceCount(levelMaxResourceCount[currentLevel]);
-        storehouse.SetResourceQualityUp(levelResourceQualityUp[currentLevel]);
+        storehouse.SetNewMaxResourceCount(levelMaxResourceCount[currentLevel-1]);
+        storehouse.SetResourceQualityUp(levelResourceQualityUp[currentLevel-1]);
     }
 }

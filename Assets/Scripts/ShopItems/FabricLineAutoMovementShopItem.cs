@@ -15,6 +15,6 @@ public class FabricLineAutoMovementShopItem : ShopItem
 
     public override void BuyItem()
     {
-        fabricLineAutoMovement.SetAutoMovementPower(levelsAutoMovementPower[currentLevel]);
+        fabricLineAutoMovement.SetAutoMovementPower(levelsAutoMovementPower[currentLevel-1]);
     }
 }
