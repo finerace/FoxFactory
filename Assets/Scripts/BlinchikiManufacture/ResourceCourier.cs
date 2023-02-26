@@ -17,6 +17,10 @@ public class ResourceCourier : MonoBehaviour
     
     [SerializeField] private List<int> resources;
 
+    [Space]
+    
+    [SerializeField] private SimpleAnimator courierAnimator;
+    
     private event Action<int> onSellResourceEvent;
     public event Action<int> OnSellResourceEvent
     {
@@ -39,10 +43,15 @@ public class ResourceCourier : MonoBehaviour
         
         while (true)
         {
+            courierAnimator.state = 1;
+
             yield return courierCityTimeWait;
 
-            yield return courierWalkToStorehouseTimeWait;
+            courierAnimator.movingObject.position = courierAnimator.positions[2];
+            courierAnimator.state = 0;
 
+            yield return courierWalkToStorehouseTimeWait;
+            
             yield return StartCoroutine(CollectResources());
             
             yield return courierWalkToCityTimeWait;
@@ -65,7 +74,7 @@ public class ResourceCourier : MonoBehaviour
     
     private IEnumerator CollectResources()
     {
-        YieldInstruction oneCollectWaitTime = new WaitForSeconds(0.1f);
+        YieldInstruction oneCollectWaitTime = new WaitForSeconds(0.05f);
         
         var maxResourceCapacity = courierMaxCapacity - Mathf.Abs(mainStorehouse.CurrentResourceCount - courierMaxCapacity);
 

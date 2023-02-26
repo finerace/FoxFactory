@@ -7,6 +7,7 @@ public class BuyPanel : MonoBehaviour
 {
     [SerializeField] private PlayerMoneyService playerMoneyService;
     [SerializeField] private ShopItem currentShopItem;
+    [SerializeField] private SimpleMenuService menuService;
     
     [Space]
     
@@ -64,6 +65,8 @@ public class BuyPanel : MonoBehaviour
             SetNewBuyPanelValues(currentShopItem);
             
             onBuyEvent?.Invoke();
+            
+            menuService.OpenMenu(0);
         }
     }
     

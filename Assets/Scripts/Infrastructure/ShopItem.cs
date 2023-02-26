@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -16,18 +17,27 @@ public abstract class ShopItem : MonoBehaviour,IPointerDownHandler,IPointerEnter
     
     [SerializeField] protected Sprite[] levelImages = new Sprite[1];
     public Sprite[] LevelImages => levelImages;
+    
+    private event Action<int> onShopItemLevelUp;
+    public event Action<int> OnShopItemLevelUp
+    {
+        add => onShopItemLevelUp += value ?? throw new NullReferenceException();
 
-    [Space] 
+        remove => onShopItemLevelUp -= value ?? throw new NullReferenceException();
+    }
     
     [SerializeField] protected bool ignoreItemMesh;
     [SerializeField] protected MeshRenderer itemMesh;
     [SerializeField] protected Material[] levelItemMat;
     public Material[] LevelItemMat => levelItemMat;
-    
 
+    [Space] 
+    
+    [SerializeField] private ParticleSystem smokeParticle;
+    
     private SimpleMenuService simpleMenuService;
     private BuyPanel buyPanel;
-    
+
     public string ItemName => itemName;
     public string ItemDescription => itemDescription;
     public int MaxLevels => maxLevels;
@@ -46,8 +56,14 @@ public abstract class ShopItem : MonoBehaviour,IPointerDownHandler,IPointerEnter
         
         currentLevel += 1;
         
+        onShopItemLevelUp?.Invoke(currentLevel);
+        
         if(!ignoreItemMesh)
             itemMesh.material = levelItemMat[currentLevel-1];
+        
+        if(smokeParticle != null)
+            smokeParticle.Play();
+        
     }
 
     private void OpenBuyPanel()
