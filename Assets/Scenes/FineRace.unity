@@ -9723,7 +9723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   globalFactoryLine: {fileID: 1399154964}
-  autoMovementPower: 0
+  autoMovementPower: 1
 --- !u!1 &1404248194
 GameObject:
   m_ObjectHideFlags: 0

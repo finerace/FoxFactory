@@ -17,8 +17,8 @@ public class FoxResource : MonoBehaviour
 
     public void UpResourceQuality(int quality)
     {
-        if(quality <= 0)
-            throw new Exception("Улучшение качества не может быть меньше или равно нулю. ПЕРЕДЕЛЫВАЙ!");
+        if(quality < 0)
+            throw new Exception("Улучшение качества не может быть меньше нуля. ПЕРЕДЕЛЫВАЙ");
         
         resourceQuality += quality;
     }
