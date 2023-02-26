@@ -15,6 +15,9 @@ public class FactoryLineClickPowerShopItem : ShopItem
 
     public override void BuyItem()
     {
+        if(currentLevel == 0)
+            return;
+        
         globalFactoryLine.SetNewClickPower(levelClickPower[currentLevel-1]);
     }
 }
