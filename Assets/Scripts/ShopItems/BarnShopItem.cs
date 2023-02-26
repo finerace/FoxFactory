@@ -9,7 +9,10 @@ public class BarnShopItem : ShopItem
     
     public override void BuyItem()
     {
-        foxBarn.SetResourceSpawnRate(foxBarnLevelSpawnFactor[currentLevel]);
-        foxBarn.SetResourceStartQuality(levelStartResourceQuality[currentLevel]);
+        if(currentLevel == 0)
+            return;
+        
+        foxBarn.SetResourceSpawnRate(foxBarnLevelSpawnFactor[currentLevel-1]);
+        foxBarn.SetResourceStartQuality(levelStartResourceQuality[currentLevel-1]);
     }
 }
