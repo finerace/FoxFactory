@@ -10,11 +10,18 @@ public class FactoryLineFragment : ResourceInput
 
     [SerializeField] private float lineWidth = 1;
     [SerializeField] private float visualLineWidth = 12;
+    
+    [Space]
+    
+    [SerializeField] private Transform resourceRotationReference;
 
+    [SerializeField] private float resourceUp = 0.25f;
+    
     public Transform FactoryLineT => factoryLineT;
     public float LineWidth => lineWidth;
     public float VisualLineWidth => visualLineWidth;
 
+    public float ResourceUp => resourceUp;
 
     private Dictionary<FoxResource, float> resourcesOnFactoryLine = new Dictionary<FoxResource, float>();
     public Dictionary<FoxResource, float> ResourcesOnFactoryLine => resourcesOnFactoryLine;
@@ -40,7 +47,11 @@ public class FactoryLineFragment : ResourceInput
         resourcesOnFactoryLine.Add(resource,resourceMoveForce);
         
         resource.ResourceT.position = GetLinePos(this,0);
-        resource.ResourceT.rotation = factoryLineT.rotation;
+        
+        if(resourceRotationReference != null)
+            resource.ResourceT.rotation = resourceRotationReference.rotation;
+        else
+            resource.ResourceT.rotation = factoryLineT.rotation;
 
         onInputResourceEvent?.Invoke(resource);
     }
@@ -97,7 +108,8 @@ public class FactoryLineFragment : ResourceInput
         resultPos = lineForwardVector * (lineLength * lineProgress);
         resultPos -= lineForwardVector * (lineLength / 2);
         
-        resultPos += factoryLineFragment.FactoryLineT.position + factoryLineFragment.FactoryLineT.up * (0.01f + lineProgress/10) ;
+        resultPos += factoryLineFragment.FactoryLineT.position + factoryLineFragment.FactoryLineT.up * 
+            (factoryLineFragment.resourceUp + lineProgress/100) ;
         
         return resultPos;
     }
