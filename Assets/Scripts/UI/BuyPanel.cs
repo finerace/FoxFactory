@@ -20,14 +20,12 @@ public class BuyPanel : MonoBehaviour
 
     public void SetNewBuyPanelValues(ShopItem shopItem)
     {
-        //var nextLevel = shopItem.CurrentLevel + 1;
-        
         itemLevelLabel.text = $"Уровень {shopItem.CurrentLevel}/{shopItem.MaxLevels}";
         itemNameLabel.text = shopItem.ItemName;
         itemDescLabel.text = shopItem.ItemDescription;
 
         if (shopItem.CurrentLevel != shopItem.MaxLevels)
-            itemPriceLabel.text = $"{shopItem.LevelCosts[shopItem.CurrentLevel]} Огоньков";
+            itemPriceLabel.text = $"{shopItem.LevelCosts[shopItem.CurrentLevel]} Монет";
         else
             itemPriceLabel.text = $"Куплено";
 

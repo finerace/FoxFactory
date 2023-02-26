@@ -44,7 +44,6 @@ public class FactoryLineSoundService : MonoBehaviour
 
     private void OnClickVolumeLouderChange(float clickPower)
     {
-        print(clickPower*clickEffectMultiplier);
         soundSource.volume += clickPower * clickEffectMultiplier;
     }
     
