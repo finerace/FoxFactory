@@ -6990,7 +6990,7 @@ MonoBehaviour:
   ignoreItemMesh: 0
   itemMesh: {fileID: 1900039123}
   levelItemMat:
-  - {fileID: 2100000, guid: 372c1388e6e6b1545a05e301c2755097, type: 2}
+  - {fileID: 2100000, guid: dbcacfd41e790244b90a5ae0b1cc7872, type: 2}
   - {fileID: 2100000, guid: dbcacfd41e790244b90a5ae0b1cc7872, type: 2}
   - {fileID: 2100000, guid: c995addc847b687448d950cc45139e18, type: 2}
   - {fileID: 2100000, guid: b01c4bd3cdaf2974b80760e740cc58c4, type: 2}
@@ -7003,6 +7003,7 @@ MonoBehaviour:
   - 0.19
   - 0.18
   - 0.17
+  levelStartResourceQuality: 0100000002000000030000000400000005000000
 --- !u!1 &1064722030
 GameObject:
   m_ObjectHideFlags: 0
@@ -8715,6 +8716,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 72a7ec8c344a5624181ffbe717832cdc, type: 2}
   storehouse: {fileID: 1595069495}
   levelMaxResourceCount: 28000000320000003c0000004600000050000000
+  levelResourceQualityUp: 0100000002000000030000000400000005000000
 --- !u!4 &1288238624 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4208696099173604585, guid: 2c526256c2615ae4986c6db5f238bbf3,
@@ -11076,7 +11078,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMoneyService: {fileID: 259843832}
   maxResourceCount: 30
-  excessPriceMultiplier: 3
+  resourceQualityUp: 0
+  excessPriceDivider: 0
 --- !u!1 &1599416268
 GameObject:
   m_ObjectHideFlags: 0
@@ -12108,6 +12111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   globalFactoryLine: {fileID: 1399154964}
   resourceSpawnFactor: 0.25
+  resourceStartQuality: 0
   startFactoryLine: {fileID: 1028298609}
   resourcePrefab: {fileID: 3116140524448493924, guid: bd6f89d8971b9dc4694191feef64d07e,
     type: 3}
