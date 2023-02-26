@@ -7,6 +7,13 @@ public class BarnShopItem : ShopItem
     [SerializeField] private float[] foxBarnLevelSpawnFactor;
     [SerializeField] private int[] levelStartResourceQuality;
     
+    private new void Awake()
+    {
+        BuyItem();
+        
+        base.Awake();
+    }
+    
     public override void BuyItem()
     {
         if(currentLevel == 0)
