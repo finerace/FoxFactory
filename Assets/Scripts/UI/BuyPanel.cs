@@ -20,14 +20,14 @@ public class BuyPanel : MonoBehaviour
 
     public void SetNewBuyPanelValues(ShopItem shopItem)
     {
-        if(shopItem.CurrentLevel == 0)
+        if(shopItem.CurrentLevel > shopItem.MaxLevels)
             return;
         
-        itemLevelLabel.text = $"Уровень {shopItem.CurrentLevel-1}/{shopItem.MaxLevels}";
+        itemLevelLabel.text = $"Уровень {shopItem.CurrentLevel}/{shopItem.MaxLevels}";
         itemNameLabel.text = shopItem.ItemName;
         itemDescLabel.text = shopItem.ItemDescription;
 
-        if (shopItem.CurrentLevel != shopItem.MaxLevels)
+        if (shopItem.CurrentLevel < shopItem.MaxLevels)
             itemPriceLabel.text = $"{shopItem.LevelCosts[shopItem.CurrentLevel-1]} Монет";
         else
             itemPriceLabel.text = $"Куплено";
@@ -39,16 +39,19 @@ public class BuyPanel : MonoBehaviour
 
     public void BuyItem()
     {
+        if(currentShopItem.CurrentLevel > currentShopItem.MaxLevels)
+            return;
+        
         if(currentShopItem.CurrentLevel >= currentShopItem.LevelCosts.Length)
             return;
         
         if (playerMoneyService.MoneyCount >= currentShopItem.LevelCosts[currentShopItem.CurrentLevel-1])
         {
             playerMoneyService.MoneyCount -= currentShopItem.LevelCosts[currentShopItem.CurrentLevel-1];
-            
-            currentShopItem.BuyItem();
+
             currentShopItem.UpgradeItemLevel();
-            
+            currentShopItem.BuyItem();
+
             SetNewBuyPanelValues(currentShopItem);
         }
     }

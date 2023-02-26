@@ -1389,7 +1389,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 158600437}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.000095266485}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6668024, y: 0.66680247, z: 0.66680247}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1398,8 +1398,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0043563843, y: -0.0013241675}
-  m_SizeDelta: {x: 1919.6, y: 1079.8}
+  m_AnchoredPosition: {x: 2.5, y: -11.2}
+  m_SizeDelta: {x: 1990.6, y: 1150.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &158600439
 MonoBehaviour:
@@ -2010,7 +2010,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 281863267}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.036279522}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2019,9 +2019,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -153, y: 174}
+  m_AnchoredPosition: {x: -136.3962, y: 139.09024}
   m_SizeDelta: {x: 59.6, y: 104.8}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0.40706813}
 --- !u!114 &281863269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2037,9 +2037,9 @@ MonoBehaviour:
   itemName: "\u0427\u0443\u0447\u0435\u043B\u043E"
   itemDescription: "\u0447\u0435\u043B \u0441\u0442\u043E\u0438\u0442 \u0441\u043C\u043E\u0442\u0440\u0438\u0442.
     \u0432\u0441\u0451. \u043F\u043E\u0442\u043E\u043C \u0441\u0433\u043E\u0440\u0438\u0442."
-  maxLevels: 1
-  currentLevel: 0
-  levelCosts: 28000000
+  maxLevels: 2
+  currentLevel: 1
+  levelCosts: 2800000028000000
   levelImages:
   - {fileID: 0}
   ignoreItemMesh: 0
@@ -2060,7 +2060,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0.011764706}
+  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0.5058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -2195,7 +2195,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 300997781}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2204,8 +2204,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -95, y: 1}
-  m_SizeDelta: {x: 206.7, y: 173.45}
+  m_AnchoredPosition: {x: -33.3, y: -160.5}
+  m_SizeDelta: {x: 284.2, y: 276.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &300997783
 MonoBehaviour:
@@ -2220,7 +2220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0.011764706}
+  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0.5058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -2261,22 +2261,20 @@ MonoBehaviour:
   itemDescription: "\u041D\u0430 \u044D\u0442\u043E\u0439 \u0444\u0430\u0431\u0440\u0438\u043A\u0435
     \u0438\u0437 \u0438\u043D\u0433\u0440\u0438\u0434\u0438\u0435\u043D\u0442\u043E\u0432
     \u0434\u0435\u043B\u0430\u0435\u0442\u0441\u044F \u0442\u0435\u0441\u0442\u043E."
-  maxLevels: 6
-  currentLevel: 0
-  levelCosts: 190000002300000064000000c8000000f401000058020000
+  maxLevels: 4
+  currentLevel: 1
+  levelCosts: 190000002300000064000000c8000000
   levelImages:
   - {fileID: 0}
   ignoreItemMesh: 0
   itemMesh: {fileID: 1325528340}
   levelItemMat:
-  - {fileID: 2100000, guid: b36c9bb58fff245499de548cb43b9a1e, type: 2}
-  - {fileID: 2100000, guid: 3cd9710897071b341a0f9d0eba352955, type: 2}
-  - {fileID: 2100000, guid: e320169dc03209146acbd49bd4cc2aa6, type: 2}
-  - {fileID: 2100000, guid: 032157dbd6a22b54cbc3620f146c1680, type: 2}
-  - {fileID: 2100000, guid: aad8f4d564bc3744891d5bde8b38d1bd, type: 2}
-  - {fileID: 2100000, guid: aad8f4d564bc3744891d5bde8b38d1bd, type: 2}
+  - {fileID: 2100000, guid: 91e36073d800d624f9e4865f9c53d086, type: 2}
+  - {fileID: 2100000, guid: 91e36073d800d624f9e4865f9c53d086, type: 2}
+  - {fileID: 2100000, guid: 3177d2fb9f5cb8046aa2a95719d691bb, type: 2}
+  - {fileID: 2100000, guid: 8ba9c004308ca184d8e487df0bfc8e42, type: 2}
   foxFactory: {fileID: 1325528343}
-  levelResourceQualityFactor: 020000000300000004000000050000000600000007000000
+  levelResourceQualityFactor: 02000000030000000400000005000000
 --- !u!1 &301058696
 GameObject:
   m_ObjectHideFlags: 0
@@ -2470,7 +2468,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 326817143}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.00014525274}
+  m_LocalPosition: {x: 0, y: 0, z: 0.00014382}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2479,8 +2477,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -422, y: 96.7}
-  m_SizeDelta: {x: 174.2, y: 158.9}
+  m_AnchoredPosition: {x: -394.5, y: 33.075}
+  m_SizeDelta: {x: 223.2, y: 213.15}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &326817145
 MonoBehaviour:
@@ -2495,7 +2493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0.011764706}
+  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0.5058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -2535,22 +2533,20 @@ MonoBehaviour:
   itemName: "\u0424\u0430\u0431\u0440\u0438\u043A\u0430 \u041C\u0438\u043A\u0441\u0435\u0440\u0430"
   itemDescription: "\u041D\u0430 \u044D\u0442\u043E\u0439 \u0444\u0430\u0431\u0440\u0438\u043A\u0435
     \u0441\u043C\u0435\u0448\u0438\u0432\u0430\u044E\u0442\u0441\u044F \u0438\u043D\u0433\u0440\u0438\u0434\u0438\u0435\u043D\u0442\u044B."
-  maxLevels: 6
-  currentLevel: 0
-  levelCosts: 190000002300000064000000c8000000f401000058020000
+  maxLevels: 4
+  currentLevel: 1
+  levelCosts: 190000002300000064000000c8000000
   levelImages:
   - {fileID: 0}
   ignoreItemMesh: 0
   itemMesh: {fileID: 21003293}
   levelItemMat:
-  - {fileID: 2100000, guid: 4da08752c5f3bcb488df5f9483891c2d, type: 2}
-  - {fileID: 2100000, guid: 9c36f55c48fe6d14d8ddb728ce178035, type: 2}
-  - {fileID: 2100000, guid: 81fce7ea7d8d0214dba2efecc5470c42, type: 2}
-  - {fileID: 2100000, guid: bcdbbd3074019984e88b5538d6c6a746, type: 2}
-  - {fileID: 2100000, guid: 44d24e5fe6209a847a64aa73cb432826, type: 2}
-  - {fileID: 2100000, guid: 44d24e5fe6209a847a64aa73cb432826, type: 2}
+  - {fileID: 2100000, guid: 869404069981bf042b7eacb21d362ddf, type: 2}
+  - {fileID: 2100000, guid: 869404069981bf042b7eacb21d362ddf, type: 2}
+  - {fileID: 2100000, guid: 47dd4d15c361b614685990d1b5785be1, type: 2}
+  - {fileID: 2100000, guid: 1eabcc0fef3cc1c4281a7a1a40a9e8f5, type: 2}
   foxFactory: {fileID: 21003296}
-  levelResourceQualityFactor: 020000000300000004000000050000000600000007000000
+  levelResourceQualityFactor: 02000000030000000400000005000000
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2718,7 +2714,7 @@ MonoBehaviour:
     audioMixerGroup: {fileID: -3266704158877669387, guid: 7c5535e63d72b7847b0d3493688679db,
       type: 2}
     clips:
-    - {fileID: 8300000, guid: 9bd043d786a27e648ac1f2196d1b5089, type: 3}
+    - {fileID: 8300000, guid: be3e745e334c1d64ab8356fc82228db3, type: 3}
     castPos: {x: 0, y: 0, z: 0}
     castParent: {fileID: 0}
     priority: 5
@@ -2866,7 +2862,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 273, y: -156.19}
+  m_AnchoredPosition: {x: 255.8, y: -153.5}
   m_SizeDelta: {x: 113.3, y: 140.93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &354269372
@@ -2882,7 +2878,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0.011764706}
+  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0.5058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -2924,9 +2920,9 @@ MonoBehaviour:
     \u0434\u0432\u0438\u0433\u0430\u0435\u0442 \u043A\u043E\u043D\u0432\u0435\u0439\u0440
     \u0442\u043E\u043B\u044C\u043A\u043E \u0435\u0441\u043B\u0438 \u0435\u0433\u043E
     \u0445\u043E\u0440\u043E\u0448\u0435\u043D\u044C\u043A\u043E \u0441\u0442\u0443\u043A\u043D\u0443\u0442\u044C."
-  maxLevels: 6
-  currentLevel: 0
-  levelCosts: 19000000320000004b000000640000007d000000c8000000
+  maxLevels: 4
+  currentLevel: 1
+  levelCosts: 19000000320000004b00000064000000
   levelImages:
   - {fileID: 0}
   ignoreItemMesh: 1
@@ -2936,16 +2932,12 @@ MonoBehaviour:
   - {fileID: 2100000, guid: b36c9bb58fff245499de548cb43b9a1e, type: 2}
   - {fileID: 2100000, guid: 3cd9710897071b341a0f9d0eba352955, type: 2}
   - {fileID: 2100000, guid: e320169dc03209146acbd49bd4cc2aa6, type: 2}
-  - {fileID: 2100000, guid: 032157dbd6a22b54cbc3620f146c1680, type: 2}
-  - {fileID: 2100000, guid: 032157dbd6a22b54cbc3620f146c1680, type: 2}
   globalFactoryLine: {fileID: 1399154964}
   levelClickPower:
   - 0.1
   - 0.125
   - 0.15
   - 0.175
-  - 0.2
-  - 0.225
 --- !u!1 &390061445
 GameObject:
   m_ObjectHideFlags: 0
@@ -3632,7 +3624,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482854457}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.000095266485}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.6668024, y: 0.66680247, z: 0.66680247}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3641,8 +3633,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.0043541137, y: -0.0013241675}
-  m_SizeDelta: {x: 1919.6, y: 1079.8}
+  m_AnchoredPosition: {x: -0.4, y: 2.5}
+  m_SizeDelta: {x: 1967.1, y: 1129.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &482854459
 MonoBehaviour:
@@ -5530,7 +5522,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 880281598}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0058522}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5539,9 +5531,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 462.9, y: -160.4}
+  m_AnchoredPosition: {x: 435, y: -139.76}
   m_SizeDelta: {x: 112.4, y: 173.8}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5000004, y: 0.5}
 --- !u!114 &880281600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5555,7 +5547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0.011764706}
+  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0.5058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -5595,9 +5587,9 @@ MonoBehaviour:
   itemName: "\u0414\u0432\u0438\u0433\u0430\u0442\u0435\u043B\u044C \u043A\u043E\u043D\u0432\u0435\u0439\u0440\u0435\u0430"
   itemDescription: "\u0414\u0432\u0438\u0433\u0430\u0442\u0435\u043B\u044C \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u0438
     \u0434\u0432\u0438\u0433\u0430\u0435\u0442 \u043A\u043E\u043D\u0432\u0435\u0439\u0435\u0440"
-  maxLevels: 6
-  currentLevel: 0
-  levelCosts: 1900000064000000c8000000fa0000002c0100005e010000
+  maxLevels: 4
+  currentLevel: 1
+  levelCosts: 1900000064000000c8000000fa000000
   levelImages:
   - {fileID: 0}
   ignoreItemMesh: 1
@@ -5607,16 +5599,12 @@ MonoBehaviour:
   - {fileID: 2100000, guid: b36c9bb58fff245499de548cb43b9a1e, type: 2}
   - {fileID: 2100000, guid: 3cd9710897071b341a0f9d0eba352955, type: 2}
   - {fileID: 2100000, guid: e320169dc03209146acbd49bd4cc2aa6, type: 2}
-  - {fileID: 2100000, guid: 032157dbd6a22b54cbc3620f146c1680, type: 2}
-  - {fileID: 2100000, guid: 032157dbd6a22b54cbc3620f146c1680, type: 2}
   fabricLineAutoMovement: {fileID: 1399154966}
   levelsAutoMovementPower:
+  - 0
   - 1
   - 2
   - 3
-  - 4
-  - 5
-  - 6
 --- !u!1 &890445225
 GameObject:
   m_ObjectHideFlags: 0
@@ -6843,7 +6831,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 21bd4712def86f845abff5531dc92ab7, type: 2}
+  - {fileID: 2100000, guid: 8f7929b1ad5df304da108327c2263295, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6999,7 +6987,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1057880731}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.08702534}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7008,8 +6996,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -682, y: 51.169}
-  m_SizeDelta: {x: 221.7, y: 167.2}
+  m_AnchoredPosition: {x: -644, y: -33.1}
+  m_SizeDelta: {x: 257.6, y: 300.2}
   m_Pivot: {x: 0.8906648, y: 0.7813664}
 --- !u!114 &1057880733
 MonoBehaviour:
@@ -7024,7 +7012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0.011764706}
+  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0.5058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -7068,7 +7056,7 @@ MonoBehaviour:
     \u043D\u0430 \u043A\u043E\u043D\u0432\u0435\u0439\u0435\u0440."
   maxLevels: 4
   currentLevel: 1
-  levelCosts: 2c010000f40100005802000084030000dc050000
+  levelCosts: 2c010000f40100005802000084030000
   levelImages:
   - {fileID: 0}
   ignoreItemMesh: 0
@@ -7076,18 +7064,15 @@ MonoBehaviour:
   levelItemMat:
   - {fileID: 2100000, guid: dbcacfd41e790244b90a5ae0b1cc7872, type: 2}
   - {fileID: 2100000, guid: dbcacfd41e790244b90a5ae0b1cc7872, type: 2}
-  - {fileID: 2100000, guid: c995addc847b687448d950cc45139e18, type: 2}
-  - {fileID: 2100000, guid: b01c4bd3cdaf2974b80760e740cc58c4, type: 2}
-  - {fileID: 2100000, guid: 375921676c284854d8e5853e2847df75, type: 2}
-  - {fileID: 2100000, guid: 61bf145b80e0dd94cb5502aca5895af3, type: 2}
+  - {fileID: 2100000, guid: 57823734bba3d134390da88220cc8869, type: 2}
+  - {fileID: 2100000, guid: 86e2a600549d15842928a878121288ed, type: 2}
   foxBarn: {fileID: 1900039126}
   foxBarnLevelSpawnFactor:
   - 0.23
   - 0.21
   - 0.19
   - 0.18
-  - 0.17
-  levelStartResourceQuality: 0100000002000000030000000400000005000000
+  levelStartResourceQuality: 01000000020000000300000004000000
 --- !u!1 &1064722030
 GameObject:
   m_ObjectHideFlags: 0
@@ -8719,7 +8704,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280142611}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0028586}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8728,9 +8713,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 690.8, y: 60.2}
-  m_SizeDelta: {x: 246.3, y: 207}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 720, y: -129.32}
+  m_SizeDelta: {x: 337.1, y: 276.7}
+  m_Pivot: {x: 0.49999982, y: 0.5000005}
 --- !u!114 &1280142613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8744,7 +8729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0.011764706}
+  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0.5058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -8786,22 +8771,21 @@ MonoBehaviour:
     \u0445\u0440\u0430\u043D\u044F\u0442\u0441\u044F \u0431\u043B\u0438\u043D\u044B,
     \u0430 \u0432 \u043C\u0430\u0433\u0430\u0437\u0438\u043D\u0435 \u043F\u0440\u043E\u0434\u0430\u044E\u0442\u0441\u044F
     \u0438\u0437\u043B\u0438\u0448\u043A\u0438."
-  maxLevels: 6
-  currentLevel: 0
-  levelCosts: 320000006400000096000000fa00000086010000f4010000
+  maxLevels: 4
+  currentLevel: 1
+  levelCosts: 320000006400000096000000fa000000
   levelImages:
   - {fileID: 0}
-  ignoreItemMesh: 1
+  ignoreItemMesh: 0
   itemMesh: {fileID: 1595069492}
   levelItemMat:
   - {fileID: 2100000, guid: ad0582de4ec0c394cad84614d1868f9b, type: 2}
-  - {fileID: 2100000, guid: 59e86d0aacd551c4baff829b3ef0983b, type: 2}
-  - {fileID: 2100000, guid: 8462c222e116189478e65f496309710d, type: 2}
-  - {fileID: 2100000, guid: bef62873e58ad9041bc329b991d2fd4d, type: 2}
-  - {fileID: 2100000, guid: 72a7ec8c344a5624181ffbe717832cdc, type: 2}
+  - {fileID: 2100000, guid: ad0582de4ec0c394cad84614d1868f9b, type: 2}
+  - {fileID: 2100000, guid: 1d9eb6c3b2eca97409b4cafc2fddbe0a, type: 2}
+  - {fileID: 2100000, guid: bcdd2f42791907544b71f6b7b7998347, type: 2}
   storehouse: {fileID: 1595069495}
-  levelMaxResourceCount: 28000000320000003c000000460000005000000064000000
-  levelResourceQualityUp: 010000000200000003000000040000000500000006000000
+  levelMaxResourceCount: 28000000320000003c00000046000000
+  levelResourceQualityUp: 01000000020000000300000004000000
 --- !u!4 &1288238624 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4208696099173604585, guid: 2c526256c2615ae4986c6db5f238bbf3,
@@ -9635,7 +9619,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1398215758}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0067571616}
   m_LocalScale: {x: 1.1591, y: 1.1591, z: 1.1591}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9644,9 +9628,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 229.9, y: 148.8}
-  m_SizeDelta: {x: 193.7, y: 158.95}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 320.1, y: 85.285}
+  m_SizeDelta: {x: 252.5, y: 221.87}
+  m_Pivot: {x: 0.5, y: 0.4999993}
 --- !u!114 &1398215760
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9660,7 +9644,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0.011764706}
+  m_Color: {r: 0.5660378, g: 0.5660378, b: 0.5660378, a: 0.5058824}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -9700,22 +9684,20 @@ MonoBehaviour:
   itemName: "\u0424\u0430\u0431\u0440\u0438\u043A\u0430 \u0411\u043B\u0438\u043D\u043E\u0432"
   itemDescription: "\u041D\u0430 \u044D\u0442\u043E\u0439 \u0444\u0430\u0431\u0440\u0438\u043A\u0435
     \u0438\u0437 \u0442\u0435\u0441\u0442\u0430 \u0436\u0430\u0440\u044F\u0442 \u0431\u043B\u0438\u043D\u044B."
-  maxLevels: 6
-  currentLevel: 0
+  maxLevels: 4
+  currentLevel: 1
   levelCosts: 190000002300000064000000c8000000f401000058020000
   levelImages:
   - {fileID: 0}
   ignoreItemMesh: 0
   itemMesh: {fileID: 1081498295}
   levelItemMat:
-  - {fileID: 2100000, guid: e69205bee71d33b46840776f5c81bfea, type: 2}
-  - {fileID: 2100000, guid: 45660fe8a6cbbf24094bde6cd451f5cc, type: 2}
-  - {fileID: 2100000, guid: a035e24c100540c4d93f37309c7ec165, type: 2}
-  - {fileID: 2100000, guid: e724044adcc778147b96e7c6e40bee03, type: 2}
-  - {fileID: 2100000, guid: fa8774e3782ab644686e48f8db3ca40b, type: 2}
-  - {fileID: 2100000, guid: fa8774e3782ab644686e48f8db3ca40b, type: 2}
+  - {fileID: 2100000, guid: 3a154ddc77ca41c49b5b6074ca5f85be, type: 2}
+  - {fileID: 2100000, guid: 3a154ddc77ca41c49b5b6074ca5f85be, type: 2}
+  - {fileID: 2100000, guid: 69c4ed0c9cdf21b46bafd322e24b5a56, type: 2}
+  - {fileID: 2100000, guid: ffb56bdcdb8d5ae4fafaf0aa2b5dfa3e, type: 2}
   foxFactory: {fileID: 1081498298}
-  levelResourceQualityFactor: 020000000300000004000000050000000600000007000000
+  levelResourceQualityFactor: 02000000030000000400000005000000
 --- !u!1 &1399154962
 GameObject:
   m_ObjectHideFlags: 0
@@ -11655,7 +11637,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -3266704158877669387, guid: 7c5535e63d72b7847b0d3493688679db,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 0a2c883a3bbbe0848bef4a79166f7455, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3191f37e8791b094589522d618bd5d65, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0
   m_Pitch: 1
@@ -11756,9 +11738,9 @@ MonoBehaviour:
   soundSource: {fileID: 1704838009}
   globalFactoryLine: {fileID: 1399154964}
   factoryLineAutoMovement: {fileID: 1399154966}
-  clickEffectMultiplier: 1
-  autoMovementEffectMultiplier: 0.2
-  changeVolumeSpeed: 2
+  clickEffectMultiplier: 0.15
+  autoMovementEffectMultiplier: 0.025
+  changeVolumeSpeed: 4
 --- !u!1 &1708449841
 GameObject:
   m_ObjectHideFlags: 0
@@ -13427,8 +13409,8 @@ MonoBehaviour:
     castPos: {x: 0, y: 0, z: 0}
     castParent: {fileID: 0}
     priority: 3
-    volumeMin: 0.85
-    volumeMax: 1
+    volumeMin: 0.76
+    volumeMax: 0.82
     isLoop: 0
     pitchMin: 0.95
     pitchMax: 1.05

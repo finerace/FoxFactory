@@ -6,8 +6,8 @@ public abstract class ShopItem : MonoBehaviour,IPointerDownHandler,IPointerEnter
     [SerializeField] protected string itemName;
     [SerializeField] protected string itemDescription;
     
-    [Range(0,16)] [SerializeField] protected int maxLevels;
-    [Range(0,16)] [SerializeField] protected int currentLevel;
+    [Range(2,16)] [SerializeField] protected int maxLevels;
+    [Range(1,16)] [SerializeField] protected int currentLevel;
 
     [Space] 
     
@@ -41,10 +41,13 @@ public abstract class ShopItem : MonoBehaviour,IPointerDownHandler,IPointerEnter
 
     public void UpgradeItemLevel()
     {
+        if(currentLevel >= maxLevels)
+            return;
+        
         currentLevel += 1;
         
         if(!ignoreItemMesh)
-            itemMesh.material = levelItemMat[currentLevel];
+            itemMesh.material = levelItemMat[currentLevel-1];
     }
 
     private void OpenBuyPanel()
