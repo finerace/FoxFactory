@@ -44,7 +44,7 @@ public abstract class ShopItem : MonoBehaviour,IPointerDownHandler,IPointerEnter
         currentLevel += 1;
         
         if(!ignoreItemMesh)
-            itemMesh.material = levelItemMat[currentLevel-1];
+            itemMesh.material = levelItemMat[currentLevel];
     }
 
     private void OpenBuyPanel()

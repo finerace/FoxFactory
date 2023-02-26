@@ -9,7 +9,7 @@ public class VolumeSliderChanger : MonoBehaviour
     
     [SerializeField] private string audioAttribute;
 
-    private void Awake()
+    private void Start()
     {
         volumeSlider.onValueChanged.AddListener(SetSound);
         

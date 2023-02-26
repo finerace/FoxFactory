@@ -48,6 +48,8 @@ public class Storehouse : ResourceInput
             SellExcess();
             void SellExcess()
             {
+                print(resource.ResourceQuality + "  " + excessPriceDivider);
+
                 playerMoneyService.MoneyCount += resource.ResourceQuality / excessPriceDivider;
             }
         }

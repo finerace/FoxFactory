@@ -9,6 +9,13 @@ public class FactoryShopitem : ShopItem
     
     [SerializeField] private int[] levelResourceQualityFactor;
     
+    private new void Awake()
+    {
+        BuyItem();
+        
+        base.Awake();
+    }
+
     public override void BuyItem()
     {
         foxFactory.SetResourceQualityFactor(levelResourceQualityFactor[currentLevel]);

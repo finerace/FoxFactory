@@ -31,17 +31,20 @@ public class FoxBarn : MonoBehaviour
         {
             oldFactoryLineMovement = currentFactoryLineMovement;
 
-            SpawnResource();
+            SpawnResource(factoryLineSpawnFactor+resourceSpawnFactor);
         }
     }
 
-    private void SpawnResource()
+    private void SpawnResource(float inputPower)
     {
         var newResource = 
             Instantiate(resourcePrefab,transform.position,Quaternion.identity).GetComponent<FoxResource>();
         
         newResource.UpResourceQuality(resourceStartQuality);
-        startFactoryLine.Input(newResource,0);
+        startFactoryLine.Input(newResource,inputPower);
+        
+        if(inputPower + resourceSpawnFactor <= 0)
+            SpawnResource(inputPower+resourceSpawnFactor);
     }
     
     public void SetResourceSpawnRate(float newSpawnRate)
