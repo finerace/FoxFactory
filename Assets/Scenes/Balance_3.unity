@@ -5372,6 +5372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0ef762ffd3df348a6223cfe7544189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonT: {fileID: 0}
   scaling: 1.015
   scalingSpeed: 20
 --- !u!1 &481872940
@@ -26263,6 +26264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0ef762ffd3df348a6223cfe7544189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonT: {fileID: 0}
   scaling: 1.015
   scalingSpeed: 20
 --- !u!114 &695494785
@@ -33251,6 +33253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0ef762ffd3df348a6223cfe7544189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonT: {fileID: 0}
   scaling: 1.05
   scalingSpeed: 20
 --- !u!1 &963565107
@@ -34018,6 +34021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0ef762ffd3df348a6223cfe7544189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonT: {fileID: 0}
   scaling: 1.05
   scalingSpeed: 20
 --- !u!1 &1035099160
@@ -35614,6 +35618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0ef762ffd3df348a6223cfe7544189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonT: {fileID: 0}
   scaling: 1.05
   scalingSpeed: 20
 --- !u!114 &1154565065
@@ -37366,6 +37371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0ef762ffd3df348a6223cfe7544189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonT: {fileID: 0}
   scaling: 1.015
   scalingSpeed: 20
 --- !u!1 &1325528339
@@ -37795,6 +37801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0ef762ffd3df348a6223cfe7544189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonT: {fileID: 0}
   scaling: 1.015
   scalingSpeed: 20
 --- !u!1 &1365197434
@@ -45264,8 +45271,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMoneyService: {fileID: 259843832}
   maxResourceCount: 30
-  resourceQualityUp: 0
-  excessPriceDivider: 3
+  resourceQualityUp: 1
+  excessPriceDivider: 5
 --- !u!1 &1599416268
 GameObject:
   m_ObjectHideFlags: 0
@@ -51276,6 +51283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0ef762ffd3df348a6223cfe7544189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonT: {fileID: 0}
   scaling: 1.015
   scalingSpeed: 20
 --- !u!114 &1802400041
@@ -57028,6 +57036,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0ef762ffd3df348a6223cfe7544189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonT: {fileID: 0}
   scaling: 1.05
   scalingSpeed: 20
 --- !u!1 &1913721602
@@ -58749,6 +58758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be0ef762ffd3df348a6223cfe7544189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonT: {fileID: 0}
   scaling: 1.05
   scalingSpeed: 20
 --- !u!114 &2089067395
