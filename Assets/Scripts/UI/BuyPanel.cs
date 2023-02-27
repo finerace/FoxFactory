@@ -41,8 +41,9 @@ public class BuyPanel : MonoBehaviour
             itemPriceLabel.text = $"{shopItem.LevelCosts[shopItem.CurrentLevel-1]} Монет";
         else
             itemPriceLabel.text = $"Всё куплено";
-
-        //itemImage.sprite = shopItem.LevelMaterials[shopItem.CurrentLevel];
+        
+        if(shopItem.LevelImages[shopItem.CurrentLevel] != null)
+            itemImage.sprite = shopItem.LevelImages[shopItem.CurrentLevel];
 
         currentShopItem = shopItem;
     }
