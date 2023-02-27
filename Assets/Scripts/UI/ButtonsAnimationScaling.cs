@@ -4,18 +4,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ButtonsAnimationScaling : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler
+public class ButtonsAnimationScaling : MonoBehaviour,IPointerEnterHandler,IPointerExitHandler,IPointerDownHandler,IPointerUpHandler
 {
-    private Transform buttonT;
+    [SerializeField] private Transform buttonT;
     [SerializeField] private float scaling;
     [SerializeField] private float scalingSpeed;
     private Vector3 startScale;
 
     private bool mouseOnButton;
-
+    private bool mouseOnDown;
+    
     private void Awake()
     {
-        buttonT = transform;
+        if(buttonT == null)
+            buttonT = transform;
 
         startScale = buttonT.localScale;
     }
@@ -29,7 +31,10 @@ public class ButtonsAnimationScaling : MonoBehaviour,IPointerEnterHandler,IPoint
     {
         var scaleFactor = 1f;
 
-        if (mouseOnButton)
+
+        if (mouseOnDown)
+            scaleFactor = 1 - (scaling-1);
+        else if (mouseOnButton)
             scaleFactor = scaling;
 
         var timeStep = Time.deltaTime * scalingSpeed;
@@ -48,5 +53,15 @@ public class ButtonsAnimationScaling : MonoBehaviour,IPointerEnterHandler,IPoint
     public void OnPointerExit(PointerEventData eventData)
     {
         mouseOnButton = false;
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        mouseOnDown = true;
+    }
+
+    public void OnPointerUp(PointerEventData eventData)
+    {
+        mouseOnDown = false;
     }
 }
