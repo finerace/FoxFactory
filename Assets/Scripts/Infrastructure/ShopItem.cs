@@ -35,6 +35,11 @@ public abstract class ShopItem : MonoBehaviour,IPointerDownHandler,IPointerEnter
     
     [SerializeField] private ParticleSystem smokeParticle;
     
+    [Space]
+    
+    private PlayerMoneyService playerMoneyService;
+    [SerializeField] private Transform notificationSprite;
+    
     private SimpleMenuService simpleMenuService;
     private BuyPanel buyPanel;
 
@@ -47,6 +52,10 @@ public abstract class ShopItem : MonoBehaviour,IPointerDownHandler,IPointerEnter
     {
         simpleMenuService = FindObjectOfType<SimpleMenuService>();
         buyPanel = FindObjectOfType<BuyPanel>();
+
+        playerMoneyService = FindObjectOfType<PlayerMoneyService>();
+        
+        playerMoneyService.OnMoneyCountChange += CheckForUpgrade;
     }
 
     public void UpgradeItemLevel()
@@ -74,6 +83,23 @@ public abstract class ShopItem : MonoBehaviour,IPointerDownHandler,IPointerEnter
     
     public abstract void BuyItem();
 
+    private void CheckForUpgrade(int currency)
+    {
+        if(currentLevel >= maxLevels)
+        {
+            notificationSprite.gameObject.SetActive(false);
+            return;
+        }
+
+        var currentUpdatePrice = levelCosts[currentLevel-1];
+        
+        if(currency >= currentUpdatePrice)
+            notificationSprite.gameObject.SetActive(true);
+        else
+            notificationSprite.gameObject.SetActive(false);
+
+    }
+    
     public virtual void OnPointerDown(PointerEventData eventData){OpenBuyPanel();}
 
     public virtual void OnPointerEnter(PointerEventData eventData){}

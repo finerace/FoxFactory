@@ -33,4 +33,9 @@ public class PlayerMoneyService : MonoBehaviour
     {
         onMoneyCountChange?.Invoke(moneyCount);
     }
+
+    private void Update()
+    {
+        onMoneyCountChange?.Invoke(moneyCount);
+    }
 }
