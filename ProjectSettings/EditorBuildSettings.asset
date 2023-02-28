@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/StartScene.unity
     guid: 70e5987417288264f888527907083361
+  - enabled: 0
+    path: Assets/Scenes/FineRace.unity
+    guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/MainScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    guid: 87a66127643caa04f99ab4b822816c44
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: af0191dcb1b08ce4fb47eb746e83e87a
