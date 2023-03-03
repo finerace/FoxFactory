@@ -58,10 +58,10 @@ public class BuyPanel : MonoBehaviour
         
         if (playerMoneyService.MoneyCount >= currentShopItem.LevelCosts[currentShopItem.CurrentLevel-1])
         {
-            playerMoneyService.MoneyCount -= currentShopItem.LevelCosts[currentShopItem.CurrentLevel-1];
-
             currentShopItem.UpgradeItemLevel();
             currentShopItem.BuyItem();
+            
+            playerMoneyService.MoneyCount -= currentShopItem.LevelCosts[currentShopItem.CurrentLevel-2];
 
             SetNewBuyPanelValues(currentShopItem);
             

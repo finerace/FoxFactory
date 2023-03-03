@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public abstract class ShopItem : MonoBehaviour,IPointerDownHandler,IPointerEnterHandler,IPointerExitHandler
+public abstract class ShopItem : MonoBehaviour,IPointerClickHandler
 {
     [SerializeField] protected string itemName;
     [SerializeField] protected string itemDescription;
@@ -26,6 +26,14 @@ public abstract class ShopItem : MonoBehaviour,IPointerDownHandler,IPointerEnter
         remove => onShopItemLevelUp -= value ?? throw new NullReferenceException();
     }
     
+    private event Action onShopItemClick;
+    public event Action OnShopItemClick
+    {
+        add => onShopItemClick += value ?? throw new NullReferenceException();
+
+        remove => onShopItemClick -= value ?? throw new NullReferenceException();
+    }
+
     [SerializeField] protected bool ignoreItemMesh;
     [SerializeField] protected MeshRenderer itemMesh;
     [SerializeField] protected Material[] levelItemMat;
@@ -43,6 +51,9 @@ public abstract class ShopItem : MonoBehaviour,IPointerDownHandler,IPointerEnter
     private SimpleMenuService simpleMenuService;
     private BuyPanel buyPanel;
 
+    [SerializeField] private bool isItemCanBuy = false;
+    public bool IsItemCanBuy => isItemCanBuy;
+    
     public string ItemName => itemName;
     public string ItemDescription => itemDescription;
     public int MaxLevels => maxLevels;
@@ -88,21 +99,20 @@ public abstract class ShopItem : MonoBehaviour,IPointerDownHandler,IPointerEnter
         if(currentLevel >= maxLevels)
         {
             notificationSprite.gameObject.SetActive(false);
+            isItemCanBuy = false;
+            
             return;
         }
 
         var currentUpdatePrice = levelCosts[currentLevel-1];
-        
-        if(currency >= currentUpdatePrice)
-            notificationSprite.gameObject.SetActive(true);
-        else
-            notificationSprite.gameObject.SetActive(false);
 
+        isItemCanBuy = currency >= currentUpdatePrice;
+        notificationSprite.gameObject.SetActive(isItemCanBuy);
     }
-    
-    public virtual void OnPointerDown(PointerEventData eventData){OpenBuyPanel();}
 
-    public virtual void OnPointerEnter(PointerEventData eventData){}
-
-    public virtual void OnPointerExit(PointerEventData eventData){}
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        OpenBuyPanel();
+        onShopItemClick?.Invoke();
+    }
 }

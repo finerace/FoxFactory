@@ -36,6 +36,6 @@ public class PlayerMoneyService : MonoBehaviour
 
     private void Update()
     {
-        onMoneyCountChange?.Invoke(moneyCount);
+        //onMoneyCountChange?.Invoke(moneyCount);
     }
 }
