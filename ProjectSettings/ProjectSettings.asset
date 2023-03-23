@@ -145,7 +145,7 @@ PlayerSettings:
     enable360StereoCapture: 0
   isWsaHolographicRemotingEnabled: 0
   enableFrameTimingStats: 0
-  enableOpenGLProfilerGPURecorders: 1
+  enableOpenGLProfilerGPURecorders: 0
   useHDRDisplay: 0
   D3DHDRBitDepth: 0
   m_ColorGamuts: 00000000
@@ -251,7 +251,7 @@ PlayerSettings:
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
   AndroidKeystoreName: '{dedicated}: Desktop/user.keystore'
-  AndroidKeyaliasName: finerace
+  AndroidKeyaliasName: fff
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1
@@ -505,7 +505,10 @@ PlayerSettings:
       m_Height: 720
       m_Kind: 1
       m_SubKind: 
-  m_BuildTargetBatching: []
+  m_BuildTargetBatching:
+  - m_BuildTarget: Android
+    m_StaticBatching: 0
+    m_DynamicBatching: 1
   m_BuildTargetGraphicsJobs: []
   m_BuildTargetGraphicsJobMode: []
   m_BuildTargetGraphicsAPIs:
@@ -514,7 +517,7 @@ PlayerSettings:
     m_Automatic: 1
   - m_BuildTarget: AndroidPlayer
     m_APIs: 0b00000008000000
-    m_Automatic: 0
+    m_Automatic: 1
   m_BuildTargetVRSettings: []
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
