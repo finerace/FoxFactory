@@ -25,7 +25,9 @@
     <img src="https://img.shields.io/badge/Jam-Indie%20Varvar's%20%234-9cf?style=for-the-badge" alt="Indie Varvar's Jam #4"/>
   </a>
   <!-- Award -->
-  <img src="https://img.shields.io/badge/Award-🏆%20Best%20Sound%20Design-gold?style=for-the-badge" alt="Award: Best Sound Design"/>
+  <a href="https://discord.com/channels/852903488018317364/935834837095415818/1082395068108898304" target="_blank">
+    <img src="https://img.shields.io/badge/Award-🥈%202nd%20Place,%20Sound%20Design-lightgrey?style=for-the-badge" alt="Award: 2nd Place, Sound Design"/>
+  </a>
   <!-- Status -->
   <img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge" alt="Status: Completed"/>
 </p>
@@ -35,14 +37,14 @@
 ### TL;DR
 *   🦊 **72-часовой геймджем-проект:** Создал с нуля готовую игру "Fox Factory" в составе команды Elledia.
 *   🤝 **Единственный разработчик и командный помощник:** Выступил в роли единственного программиста, воплощая в жизнь видение художников, гейм-дизайнеров и композитора.
-*   🏆 **Награда за лучший саунд-дизайн:** Наша игра победила в номинации, отчасти благодаря небольшой динамической аудиосистеме, которую я реализовал для помощи композитору.
+*   🥈 **2-е место за саунд-дизайн:** Наша игра заняла второе место в номинации, отчасти благодаря небольшой динамической аудиосистеме, которую я реализовал для помощи композитору.
 *   ✨ **Фокус на софт-скиллах:** Этот проект — демонстрация командной работы, эффективной коммуникации и соблюдения жестких дедлайнов в творческой среде.
 
 ---
 
 ### 📜 О проекте
 
-**Fox Factory** — это наш командный проект, разработанный для геймджема **Indie Varvar's Jam #4**. В роли команды **Elledia** мы создали короткую, но уютную игру, в которой игроку предстоит помочь лисёнку навести порядок на фабрике. Весь проект, от идеи до релиза, был реализован всего за 3 дня — это был настоящий спринт, наполненный творчеством, взаимопомощью и позитивом.
+**Fox Factory** — это наш командный проект, разработанный для геймджема **Indie Varvar's Jam #4**. В роли команды **Elledia** мы создали короткую, но уютную игру, в которой игроку предстоит помочь маленьким лисятам навести порядок на фабрике. Весь проект, от идеи до релиза, был реализован всего за 3 дня — это был настоящий спринт, наполненный творчеством, взаимопомощью и позитивом.
 
 ---
 
@@ -61,7 +63,7 @@
 
 *   **🎲 Реализация идей гейм-дизайнеров:** Моей главной задачей было слушать. Я брал концепты и идеи гейм-дизайнеров и быстро превращал их в работающие прототипы и механики. Способность быстро и точно реализовать чужое видение была ключом к тому, чтобы мы уложились в сроки.
 
-*   **🎶 Вклад в лучший саунд-дизайн:** Мы гордимся тем, что наш проект получил награду за **"Лучший саунд-дизайн"**. Это заслуга нашего талантливого композитора и нашего тесного сотрудничества. Чтобы помочь ему, я создал небольшую, но эффективную систему, которая позволяла прямо из конфига задавать звукам случайные параметры, такие как к примеру высота тона (pitch). Это позволило оживить звуковой ландшафт, сделать его более динамичным и непредсказуемым без необходимости создавать сотни отдельных аудиофайлов.
+*   **🎶 Вклад в саунд-дизайн:** Мы гордимся тем, что наш проект занял **второе место** в номинации **"Лучший саунд-дизайн"**. Это заслуга нашего талантливого композитора и нашего тесного сотрудничества. Чтобы помочь ему, я создал небольшую, но эффективную систему, которая позволяла прямо из конфига задавать звукам случайные параметры, такие как к примеру высота тона (pitch). Это позволило оживить звуковой ландшафт, сделать его более динамичным и непредсказуемым без необходимости создавать сотни отдельных аудиофайлов.
 
 ---
 
@@ -123,7 +125,7 @@
 </p>
 
 <h1 align="center">🦊 Fox Factory</h1>
-<h3 align="center">A charming game about a little foxes at a factory, crafted with love in 72 hours.</h3>
+<h3 align="center">A charming game about little foxes at a factory, crafted with love in 72 hours.</h3>
 
 <p align="center">
   <!-- Play on Itch.io -->
@@ -135,7 +137,9 @@
     <img src="https://img.shields.io/badge/Jam-Indie%20Varvar's%20%234-9cf?style=for-the-badge" alt="Indie Varvar's Jam #4"/>
   </a>
   <!-- Award -->
-  <img src="https://img.shields.io/badge/Award-🏆%20Best%20Sound%20Design-gold?style=for-the-badge" alt="Award: Best Sound Design"/>
+  <a href="https://discord.com/channels/852903488018317364/935834837095415818/1082395068108898304" target="_blank">
+    <img src="https://img.shields.io/badge/Award-🥈%202nd%20Place,%20Sound%20Design-lightgrey?style=for-the-badge" alt="Award: 2nd Place, Sound Design"/>
+  </a>
   <!-- Status -->
   <img src="https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge" alt="Status: Completed"/>
 </p>
@@ -145,14 +149,14 @@
 ### TL;DR
 *   🦊 **72-Hour Game Jam Project:** Created the complete game "Fox Factory" from scratch as part of team Elledia.
 *   🤝 **Sole Developer & Team Enabler:** Served as the sole programmer, bringing the vision of artists, game designers, and the composer to life.
-*   🏆 **Awarded Best Sound Design:** Our game won the award, partly thanks to a small dynamic audio system I implemented to assist the composer.
+*   🥈 **Awarded 2nd Place for Sound Design:** Our game took second place in its category, partly thanks to a small dynamic audio system I implemented to assist the composer.
 *   ✨ **A Showcase of Soft Skills:** This project demonstrates teamwork, effective communication, and meeting tight deadlines in a creative environment.
 
 ---
 
 ### 📜 About the Project
 
-**Fox Factory** is our team project developed for the **Indie Varvar's Jam #4**. As team **Elledia**, we created a short but cozy game where the player helps a little fox tidy up a factory. The entire project, from concept to release, was completed in just 3 days—it was a true sprint filled with creativity, mutual support, and positive energy.
+**Fox Factory** is our team project developed for the **Indie Varvar's Jam #4**. As team **Elledia**, we created a short but cozy game where the player helps little foxes tidy up a factory. The entire project, from concept to release, was completed in just 3 days—it was a true sprint filled with creativity, mutual support, and positive energy.
 
 ---
 
@@ -171,7 +175,7 @@ In this project, I took on the role of the **sole developer**. During a game jam
 
 *   **🎲 Implementing the Game Designers' Ideas:** My main job was to listen. I took the concepts and ideas from our game designers and quickly turned them into working prototypes and mechanics. The ability to rapidly and accurately implement their vision was key to meeting our deadline.
 
-*   **🎶 Contributing to the Award-Winning Sound Design:** We are incredibly proud that our project received the award for **"Best Sound Design."** This is a testament to our talented composer and our close collaboration. To support him, I created a small but effective system that allowed for randomizing sound parameters, like pitch, directly from a config file. This helped bring the soundscape to life, making it more dynamic and unpredictable without needing to create hundreds of separate audio files.
+*   **🎶 Contributing to the Sound Design:** We are incredibly proud that our project took **2nd place** in the **"Best Sound Design"** category. This is a testament to our talented composer and our close collaboration. To support him, I created a small but effective system that allowed for randomizing sound parameters, like pitch, directly from a config file. This helped bring the soundscape to life, making it more dynamic and unpredictable without needing to create hundreds of separate audio files.
 
 ---
 
